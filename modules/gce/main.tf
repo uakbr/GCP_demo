@@ -92,3 +92,4 @@ resource "google_project_iam_member" "spanner_role" {
 }
 
 data "google_client_config" "google_client" {}
+
