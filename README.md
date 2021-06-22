@@ -16,7 +16,7 @@
 
 * Before running `terraform plan`, GA will run `terraform init` and `terraform fmt` through the script and before running `terraform apply`, it will run `terraform init` script only. `Tf plan` will generate `tf_plan file/artifact` which will be further used by `tf apply`. `actions/upload-artifact@v2` and `actions/download-artifact@v2` allows uploading (in `tf plan` job) and downloading (in `tf apply` job) or in short **sharing of artifacts b/w jobs**.
 
-## Terraform apply is manual.
+## Terraform apply is manual
 * As per my knowledge, GitHub Actions does not have manual approval other than the environment way. I searched a lot, but no luck; so I’ve gone with GitHub Environments where I’ve configured `tf_apply` as my environment and **add myself as a reviewer**. I’ve done this just to prevent any infrastructure mess.
 
 ```
